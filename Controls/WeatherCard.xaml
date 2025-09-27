@@ -1,0 +1,18 @@
+<UserControl x:Class="WeatherDashboard.Controls.WeatherCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" d:DesignHeight="150" d:DesignWidth="300">
+    <Border BorderBrush="Gray" BorderThickness="1" Margin="5" CornerRadius="5" Background="White">
+        <StackPanel Margin="10">
+            <TextBlock Text="{Binding Weather.Location}" FontSize="16" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Weather.Timestamp, StringFormat='Fetched: {0:MMM dd, yyyy HH:mm}'}" FontSize="12" Foreground="Gray"/>
+            <TextBlock Text="{Binding Weather.Temperature, StringFormat='Temperature: {0:F1}°F'}" FontSize="14"/>
+            <TextBlock Text="{Binding Weather.Description}" FontSize="14"/>
+            <TextBlock Text="{Binding Weather.Humidity, StringFormat='Humidity: {0}%'}" FontSize="14"/>
+            <TextBlock Text="{Binding Weather.WindSpeed, StringFormat='Wind Speed: {0} mph'}" FontSize="14"/>
+            <TextBlock Text="{Binding Weather.ApiSource, StringFormat='Source: {0}'}" FontSize="12" Foreground="Gray"/>
+        </StackPanel>
+    </Border>
+</UserControl>
